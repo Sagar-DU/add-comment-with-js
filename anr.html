@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Delete</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #container,
+        #add-more {
+            margin-left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="delete.html">Delete Page</a>
+                </li>
+                <li>
+                    <a href="anr.html">Add & Remove</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Let's Do Something Fun</h1>
+        <section>
+            <ul id="container">
+                <li class="item">Lorem, ipsum.</li>
+                <li class="item">Harum, perferendis.</li>
+                <li class="item">Sed, non.</li>
+                <li class="item">Enim, ea.</li>
+                <li class="item">Est, a.</li>
+            </ul>
+            <button id="add-more">Add More</button>
+        </section>
+    </main>
+    <footer>
+        &copy; Reserved by NHSDU
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        // Get each items 
+        // const items = document.getElementsByClassName ('item');
+        // // Loop through each item to get individual items 
+        // for (const item of items){
+        //     // EventListener to each item 
+        //     item.addEventListener ('click', function(event){
+        //         // Remove child item 
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        // New better way to add and remove 
+        document.getElementById ('container').addEventListener ('click', function (event){
+            event.target.parentNode.removeChild(event.target)
+        })
+        document.getElementById ('add-more').addEventListener ('click', function(){
+            const listContainer = document.getElementById ('container');
+            const li = document.createElement ('li');
+            li.innerText = 'Its a brand new day! Click Item to delete';
+            listContainer.appendChild(li);
+        })
+    </script>
+
+</body>
+
+</html>
