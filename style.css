@@ -7,3 +7,21 @@ footer {
     left: 50%;
     font-size: small;
 }
+
+nav > ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > ul > li {
+list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    margin-left: 43%;
+}

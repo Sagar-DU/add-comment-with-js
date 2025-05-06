@@ -5,7 +5,7 @@ document.getElementById('btn-post').addEventListener('click', function () {
 )
 
 // Posting comment by KeyboardEvent
-document.getElementById('comment-box').addEventListener('keydown', function (event) {
+document.getElementById('comment-box').addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         event.preventDefault();  // Prevent the default "Enter" key behavior (e.g., form submission)
         postComment();
